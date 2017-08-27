@@ -19,7 +19,7 @@
 
 Name:           pcb
 Version:        4.0.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        An interactive printed circuit board editor
 License:        GPLv2
 Group:          Applications/Engineering
@@ -126,7 +126,6 @@ install -Dm 755 doc/doxygen/create_pcb_dox.sh %{buildroot}%{_docdir}/%{name}-%{v
 install -Dm 644 doc/doxygen/*.html %{buildroot}%{_docdir}/%{name}-%{version}/doxygen/
 install -Dm 644 doc/doxygen/*.png %{buildroot}%{_docdir}/%{name}-%{version}/doxygen/
 install -Dm 644 doc/doxygen/*.txt %{buildroot}%{_docdir}/%{name}-%{version}/doxygen/
-#chmod 755 %{buildroot}%{_docdir}/%{name}-%{version}/doxygen/create_pcb_dox.sh
 
 mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}/examples/
 mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}/examples/libraries/
@@ -135,12 +134,6 @@ install -Dm 644 example/libraries/example.* %{buildroot}%{_docdir}/%{name}-%{ver
 
 mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}/tutorial/
 install -Dm 644 tutorial/tut1.pcb %{buildroot}%{_docdir}/%{name}-%{version}/tutorial/
-
-# install Getting Started documentation by hand
-#mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}/gs/
-#mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}/gs/pt_BR
-#install -Dm 644 doc/gs/ %{buildroot}%{_docdir}/%{name}-%{version}/gs/
-#install -Dm 644 doc/gs/pt_BR/ %{buildroot}%{_docdir}/%{name}-%{version}/gs/pt_BR/
 
 ### Clean up ###
 
@@ -197,8 +190,6 @@ rm -rf %{buildroot}
 %doc %{_docdir}/%{name}-%{version}/examples/LED*.*
 %doc %{_docdir}/%{name}-%{version}/examples/libraries/example.*
 %doc %{_docdir}/%{name}-%{version}/tutorial/tut1.pcb
-#%doc %{_docdir}/%{name}-%{version}/gs/
-#%doc %{_docdir}/%{name}-%{version}/gs/pt_BR/
 %{_bindir}/%{name}
 %{_datadir}/gEDA/scheme/*
 %{_datadir}/%{name}/
@@ -215,5 +206,8 @@ rm -rf %{buildroot}
 %{_datadir}/appdata/pcb.appdata.xml
 
 %changelog
+* Sun Aug 27 2017 bert.timmerman@xs4all.nl
+- removed outcommented cruft.
+
 * Fri May 19 2017 bert.timmerman@xs4all.nl
 - first spec file for release 4.0.0.
