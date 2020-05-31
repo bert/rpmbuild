@@ -32,7 +32,8 @@ pcb-dox:
 #	-rpmbuild -bb SPECS/pcb-dox-4.1.2-?.spec --clean
 #	-rpmbuild -bb SPECS/pcb-dox-4.1.3-?.spec --clean
 #	-rpmbuild -bb SPECS/pcb-dox-4.2.0-?.spec --clean
-	-rpmbuild -bb SPECS/pcb-dox-4.2.1-?.spec --clean
+#	-rpmbuild -bb SPECS/pcb-dox-4.2.1-?.spec --clean
+#	-rpmbuild -bb SPECS/pcb-dox-4.2.2-?.spec --clean
 
 check:
 	-rpmlint -v RPMS > logs/RPMS.log
