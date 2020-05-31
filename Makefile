@@ -9,7 +9,8 @@ pcb:
 #	-rpmbuild -bs SPECS/pcb-4.1.2-?.spec --clean
 #	-rpmbuild -bs SPECS/pcb-4.1.3-?.spec --clean
 #	-rpmbuild -bs SPECS/pcb-4.2.0-?.spec --clean
-	-rpmbuild -bs SPECS/pcb-4.2.1-?.spec --clean
+#	-rpmbuild -bs SPECS/pcb-4.2.1-?.spec --clean
+	-rpmbuild -bs SPECS/pcb-4.2.2-?.spec --clean
 
 #	-rpmbuild -bb SPECS/pcb-4.0.0-?.spec --clean
 #	-rpmbuild -bb SPECS/pcb-4.0.1-?.spec --clean
@@ -19,7 +20,8 @@ pcb:
 #	-rpmbuild -bb SPECS/pcb-4.1.2-?.spec --clean
 #	-rpmbuild -bb SPECS/pcb-4.1.3-?.spec --clean
 #	-rpmbuild -bb SPECS/pcb-4.2.0-?.spec --clean
-	-rpmbuild -bb SPECS/pcb-4.2.1-?.spec --clean
+#	-rpmbuild -bb SPECS/pcb-4.2.1-?.spec --clean
+	-rpmbuild -bb SPECS/pcb-4.2.2-?.spec --clean
 
 pcb-dox:
 #	-rpmbuild -bb SPECS/pcb-dox-4.0.0-?.spec --clean
